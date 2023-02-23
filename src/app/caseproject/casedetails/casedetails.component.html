@@ -1,0 +1,35 @@
+<span class="ion-page">
+    <ion-content>
+        <ion-grid class="background">
+            <div class="ion-padding-start">
+                <p class="main-heading ion-padding">Projects</p>
+                <ion-row class="ion-justify-content-start ion-align-self-start">
+                    <ion-col size-sm="12" size-md="12" size-lg="12" size="12">
+                        <ion-row>
+                            <ion-button (click)="goToCaseResults()">back</ion-button>
+                            <ion-col size-lg="12" size-md="12" size-sm="12">
+                                <div class="case-details">
+                                    <div class="media-body">
+                                        
+                                        <p style="font-weight: bold;">{{this.caseResults?.caseName}}</p>
+                                      <p>Details</p>
+                                      <ion-row>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">CaseNumber:</span> {{this.caseResults?.caseNumber}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">Case Status:</span> {{this.caseResults?.caseStatus?.caseStatusGroup}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">Courthouse:</span> {{this.caseResults?.courtLocation?.name}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">Case Type:</span> {{this.caseResults?.caseType?.caseClass}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">Case Name:</span> {{this.caseResults?.caseName}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">State:</span> {{this.caseResults?.courtLocation?.stateName}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">Filed Date:</span> {{this.caseResults?.filedDate}}</p>
+                                      </ion-row>
+                                    </div>
+                                  </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </ion-content>
+</span>
+

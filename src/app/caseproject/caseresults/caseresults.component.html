@@ -1,0 +1,36 @@
+<span class="ion-page">
+    <ion-content>
+        <ion-grid class="background">
+            <div class="ion-padding-start">
+                <p class="main-heading ion-padding">Projects</p>
+                <ion-row class="ion-justify-content-start ion-align-self-start">
+                    <ion-col size-sm="12" size-md="12" size-lg="12" size="12">
+                        <ion-row>
+                            <ion-col size-lg="4" size-md="6" size-sm="6">
+                                <div class="case-cards" *ngFor="let list of this.caseSearchResultArray; let i=index" (click)="this.index = i">
+                                    <div class="media-body">
+                                      <h5 class="mt-0" style="font-weight: bold;">{{list?.caseName}}</h5>
+                                      <p>CaseNumber: {{list?.caseNumber}}</p>
+                                      <p>CaseId: {{list?.caseId}}</p>
+                                    </div>
+                                </div>
+                            </ion-col>
+                            <ion-col>
+                                <a (click)="getCaseDetails()" class="maximise">Maximise</a>
+                                <div class="case-details">
+                                    <h1>Details</h1>
+                                    <ion-row>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">CaseId:</span> {{this.caseSearchResultArray[this.index]?.caseId}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">CaseName:</span> {{this.caseSearchResultArray[this.index]?.caseName}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">CaseNumber:</span> {{this.caseSearchResultArray[this.index]?.caseNumber}}</p>
+                                        <p class="ion-padding-start"><span style="font-weight: bold;">Court Name:</span> {{this.caseSearchResultArray[this.index]?.court?.name}}</p>
+                                    </ion-row>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </ion-content>
+</span>
